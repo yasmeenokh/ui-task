@@ -1,0 +1,120 @@
+// Variables :
+@font-face {
+  font-family: 'Alexandria-Bold';
+  src: url('/Alexandria-font/Alexandria-Bold.ttf');
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Alexandria-Medium';
+  src: url('/Alexandria-font/Alexandria-Medium.ttf');
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Alexandria-Regular';
+  src: url('/Alexandria-font/Alexandria-Regular.ttf');
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
+$regular: 'Alexandria-Regular';
+$medium: 'Alexandria-Medium';
+$bold: 'Alexandria-Bold';
+
+$primary-green: #0F686D;
+$secondary-green: #0A6469;
+$dark-gray: #333333;
+$gray: #707070;
+$light-gray: #EEEEEE;
+$white: #ffffff;
+$disabled-gray: #F4F4F4;
+// Shared Classes :
+.flex-start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grid-three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.primary-btn {
+  display: block;
+  padding: 14px 12px;
+  min-width: 186px;
+  max-width: fit-content;
+  width: fit-content;
+  border: solid 1.5px $primary-green;
+  color: $primary-green;
+  background-color: #ffffff;
+  font-size: 14px;
+  font-family: $medium;
+  border-radius: 8px;
+  text-align: center;
+  &.add{
+    position: relative;
+    &::before{
+      position: absolute;
+      content: '';
+      width: 32px;
+      height: 32px;
+      background: url(/images/add_box_green.svg) no-repeat;
+      right: 30px;
+      top: 10px;
+    }
+  }
+}
+.bordered-box{
+  padding: 18px 12px;
+  border: solid 1.5px #CCCCCC;
+  border-radius: 8px;
+}
+
+.react-tel-input .selected-flag{
+  padding: 0px 12px 0px 8px !important;
+  .flag{
+    .arrow{
+      display: none;
+    }
+  }
+}
+.flag-dropdown {
+  border: 0 !important;
+}
+
+.show_item_icon{
+  width: 24px;
+  height: 24px;
+  background: url(/images/visibility_black.svg) no-repeat center;
+}
+.edit_item_icon{
+  width: 24px;
+  height: 24px;
+  background: url(/images/edit_green.svg) no-repeat center;
+}
+
+.close-button{
+  width: 17px;
+  height: 17px;
+  background: url(/images/close-icon-black.svg) no-repeat center;
+}

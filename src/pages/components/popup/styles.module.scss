@@ -1,0 +1,26 @@
+@import '../../../pages/shared-style-files/globals.scss';
+
+.popup_fall_back{
+ position: fixed;
+ width: 100vw;
+ height: 100vh;
+ top: 0;
+ display: grid;
+ place-items: center;
+ background: rgba(0, 0, 0, 0.70);
+ .popup_wrapper{
+  max-width: 956px;
+  background: white; 
+  border-radius: 8px;
+  padding: 32px;
+  .popup_header{
+   border-bottom: 1px #CCCCCC solid;
+   padding-bottom: 18px;
+   margin-bottom: 34px;
+   h4{
+    color: $dark-gray;
+    font-size: 36px;
+   }
+  }
+ }
+}

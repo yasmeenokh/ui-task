@@ -1,0 +1,178 @@
+@import './globals.scss';
+
+// Rest Style :
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: #F9F9F9;
+}
+div, footer,header, * {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: $regular;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+p,
+ul, div , * {
+  font-family: $regular;
+  line-height: 24px;
+  color: $dark-gray;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $bold;
+  line-height: 1.2;
+  color: $dark-gray;
+}
+h4,
+h5 {
+  font-family: $medium;
+  line-height: 30px;
+  color: $dark-gray;
+}
+main{
+  min-height: 55vh;
+  max-width: 1400px;
+  margin: 0 auto;
+  color: $dark-gray;
+  @media (min-width: 1900px) {
+    min-height: 75vh;
+  }
+}
+img{
+  max-width: 100%;
+}
+.grecaptcha-badge { 
+  visibility: hidden;
+}
+button { 
+  all: unset;
+  cursor: pointer;
+}
