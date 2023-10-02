@@ -143,7 +143,7 @@ export default function Accordion({ proceduresType, extraFieldsRes, allProcedure
                   <tbody>
                     {allProcedures.length > 0 ? (
                       <>
-                        {visibleItems.map((procedure: any, index: number) =>
+                        {visibleItems && visibleItems.map((procedure: any, index: number) =>
                           <tr key={index}>
                             <td>{procedure.ProcedureNameAr}</td>
                             <td>{procedure.IsBefore ? 'نعم' : ''}</td>
@@ -190,7 +190,7 @@ export default function Accordion({ proceduresType, extraFieldsRes, allProcedure
           <h2 >بيانات خاصة بالشهود على الانتهاك (إن وجدوا)</h2>
           <div className={classes.item_content} onClick={(e) => e.stopPropagation()}>
             <form onSubmit={(e) => handleFormSubmit(e, '/')}>
-              {witnessForms.map((form) => (
+              {witnessForms && witnessForms.map((form) => (
                 <fieldset key={form.id} className={`${classes.form_item} ${classes.witness_form}`}>
                   <div className={`flex-space-between`}>
                     <h4>الشاهد ال{form.id}</h4>

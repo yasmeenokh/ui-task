@@ -19,7 +19,7 @@ const CustomForm = ({ handleFormSubmit, proceduresType, DropDownLabelText, extra
     thirdValue = formData[thirdKey]; 
   }
   const [dropDownValue, setDropDownValue] = useState(formData ? formData.taken_procedures : '');
-  const [secondaryDropDownValue, setSecondaryDropDownValue] = useState(formData ? thirdValue : '');
+  const [secondaryDropDownValue, setSecondaryDropDownValue] = useState('');
   const [extraFieldItem, setExtraFieldItem] = useState<{ [key: string]: any[] } | null>(null);
   const transformData = (data: any) => {
     return data.map((obj: any) => ({
@@ -160,7 +160,7 @@ const CustomForm = ({ handleFormSubmit, proceduresType, DropDownLabelText, extra
                       const labels = DropDownLabelText[key] || [];
                       return (
                         <React.Fragment key={key}>
-                          {labels.map((label: string, index: number) => {
+                          {labels && labels.map((label: string, index: number) => {
                             return (
                               <div key={index} className={classes.input_wrapper}>
                                 <label htmlFor={`ExtraFieldValue_${key}_${index}`}>{label}</label>

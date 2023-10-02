@@ -40,7 +40,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, onChange, readOnly
       </div>
       {isOpen && (
         <div className={`bordered-box ${styles.dropdown} ${isOpen ? styles.expanded : ''}`}>
-          {options.map((option) => (
+          {options && options.map((option) => (
             <div key={option.value} onClick={() => {
               handleOptionClick(option.value, option.id)
               }} className={`${styles.option_item}`}>
