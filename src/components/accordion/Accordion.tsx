@@ -200,7 +200,7 @@ export default function Accordion({ proceduresType, extraFieldsRes, allProcedure
                     <label htmlFor={`name${form.id}`}>الاسم</label>
                     <input className={`bordered-box`} name={`name-${form.id}`} id={`name${form.id}`} type="text" placeholder='الاسم' required />
                   </div>
-                  <div className={`flex-start ${classes.flex_wrapper}`}>
+                  <div className={`flex-start flex_col ${classes.flex_wrapper}`}>
                     <div className={`${classes.input_wrapper}`}>
                       <label htmlFor={`address${form.id}`}>العنوان</label>
                       <input className={`bordered-box`} name={`address-${form.id}`} id={`name${form.id}`} type="text" placeholder='العنوان' required />

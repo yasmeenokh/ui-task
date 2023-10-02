@@ -45,6 +45,10 @@
       margin-bottom: 80px;
       table {
         width: 100%;
+        display: block;
+        @media (max-width: 999px) {
+          overflow-y: auto;
+        }
       }
       .icons_wrapper{
         justify-content: end;
@@ -105,6 +109,39 @@
         }
       }
     }
+    @media (max-width : 999px) {
+      padding: 0 16px;
+      h2{
+        font-size: 18px;
+      }
+      .search_result_wrapper{
+        max-width: 100%;
+        tbody, thead{
+          display: block;
+          @media (max-width: 700px) {
+            display: table-header-group;
+          }
+        }
+        tr{
+          td, th{
+            min-width: 40px;
+            &:first-child{
+              width: auto;
+              @media (max-width: 700px) {
+                width: 150px;
+              }
+            }
+            &:nth-child(4) {
+              width: auto;
+              max-width: 100%;
+              @media (max-width: 700px) {
+                width: 250px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 .form_item {
@@ -117,9 +154,13 @@
   &.witness_form {
     padding-bottom: 34px;
     border-bottom: solid 1px #cccccc;
+    min-width: 0;
   }
   span {
     font-size: 14px;
+    @media (max-width: 999px) {
+      font-size: 12px;
+    }
   }
   .delete_icon {
     width: 24px;
@@ -133,6 +174,9 @@
     input[type='tel'] {
       padding-right: 40px !important;
       border: none;
+    }
+    @media (max-width: 999px) {
+      width: 100%;
     }
   }
   .checkbox_wrapper {
@@ -151,7 +195,13 @@
     input {
       &:not([type='checkbox']) {
         width: 420px;
+        @media (max-width: 999px) {
+          width: 100%;
+        }
       }
+    }
+    @media (max-width: 999px) {
+      gap: 18px;
     }
   }
   input {
@@ -172,23 +222,15 @@
       &:focus {
         accent-color: $secondary-green;
         position: relative;
-        // &::after{
-        //  content: '';
-        //  background: url(/images/done_black.svg) no-repeat center;
-        //  background-color: $secondary-green;
-        //  background-size: 18px;
-        //  width: 30px;
-        //  height: 30px;
-        //  position: absolute;
-        //  z-index: 2;
-        //  border-radius: 8px;
-        // }
       }
     }
   }
   textarea {
     font-size: 18px;
     width: 100%;
+    @media (max-width: 999px) {
+      font-size: 14px;
+    }
   }
   input[type='date'] {
     position: relative;

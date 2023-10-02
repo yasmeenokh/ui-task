@@ -152,7 +152,7 @@ const CustomForm = ({ handleFormSubmit, proceduresType, DropDownLabelText, extra
                   </div>
                 </div>
               </div>
-              <div className={`flex-start ${classes.flex_wrapper}`}>
+              <div className={`flex-start flex_col ${classes.flex_wrapper}`}>
                 {extraFieldItem &&
                   Object.keys(extraFieldItem).map((key) => {
                     const associatedData = extraFieldItem[key];

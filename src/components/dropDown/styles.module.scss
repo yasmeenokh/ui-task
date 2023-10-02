@@ -9,6 +9,14 @@
  &.isPopup{
     max-width: 725px;
  }
+ @media (max-width: 999px) {
+  width: auto;
+  max-width: max-content;
+  min-width: 62%;
+  &.isPopup{
+    max-width: max-content;
+  }
+ }
  &.isReadOnly{
   .select{
     background-color: $disabled-gray;
@@ -46,8 +54,9 @@
    transform: rotate(180deg);
   }
  }
-
- /* Style the dropdown options */
+ @media (max-width: 999px) {
+  padding: 12px 12px;
+ }
 }
 .dropdown {
   padding: 16px 8px 8px;

@@ -1,126 +1,138 @@
 @import '../../pages/shared-style-files/globals.scss';
 
 .form_item {
- cursor: initial;
- margin-bottom: 40px;
- label {
-   display: block;
-   margin-bottom: 8px;
- }
- &.witness_form {
-   padding-bottom: 34px;
-   border-bottom: solid 1px #cccccc;
- }
- span {
-   font-size: 14px;
- }
- .delete_icon {
-   width: 24px;
-   height: 24px;
-   background: url(/images/delete_red.svg) no-repeat center;
-   background-size: contain;
- }
- .input_wrapper {
-   margin-bottom: 36px;
-   // width: 100%;
-   input[type='tel'] {
-     padding-right: 40px !important;
-     border: none;
-   }
- }
- .checkbox_wrapper {
-   margin-top: 18px;
- }
- .phone_wrapper {
-   background-color: #fff;
-   padding: 13px 12px;
-   input {
-     text-align: end;
-     padding-left: 0;
-   }
- }
- .flex_wrapper {
-   gap: 24px;
-   input {
-     &:not([type='checkbox']) {
-       width: 420px;
-     }
-   }
- }
- input {
-   font-size: 14px;
-   &:not([type='checkbox']) {
-     width: 100%;
-     // max-width: 864px;
-     &:only-child {
-       width: 864px;
-     }
-   }
-   &[type='checkbox'] {
-     width: 28px;
-     height: 28px;
-     cursor: pointer;
-     accent-color: $secondary-green;
-     &:checked,
-     &:focus {
-       accent-color: $secondary-green;
-       position: relative;
-       // &::after{
-       //  content: '';
-       //  background: url(/images/done_black.svg) no-repeat center;
-       //  background-color: $secondary-green;
-       //  background-size: 18px;
-       //  width: 30px;
-       //  height: 30px;
-       //  position: absolute;
-       //  z-index: 2;
-       //  border-radius: 8px;
-       // }
-     }
-   }
- }
- textarea {
-   font-size: 18px;
-   width: 100%;
- }
- input[type='date'] {
-   position: relative;
-   text-align: end;
-   &::-webkit-calendar-picker-indicator {
-     position: absolute;
-     bottom: 12px;
-     color: rgba(0, 0, 0, 0);
-     display: block;
-     background: url(/images/calender.svg) no-repeat;
-     width: 24px;
-     height: 24px;
-     border-width: thin;
-   }
- }
- .prev_procedures {
-   p {
-     color: $primary-green;
-     font-size: 14px;
-     font-family: $regular;
-     text-decoration: underline;
-     text-underline-offset: 4px;
-   }
-   position: relative;
-   padding-left: 20px;
-   &::after {
-     content: '';
-     background: url(/images/down_arrow_green.svg) no-repeat center;
-     background-size: contain;
-     width: 14px;
-     height: 24px;
-     position: absolute;
-     left: 0;
-     top: 2px;
-   }
- }
- &.popup_form_read{
-  textarea, input{
-    background-color: $disabled-gray;
+  cursor: initial;
+  margin-bottom: 40px;
+  label {
+    display: block;
+    margin-bottom: 8px;
   }
- }
+  &.witness_form {
+    padding-bottom: 34px;
+    border-bottom: solid 1px #cccccc;
+  }
+  span {
+    font-size: 14px;
+  }
+  .delete_icon {
+    width: 24px;
+    height: 24px;
+    background: url(/images/delete_red.svg) no-repeat center;
+    background-size: contain;
+  }
+  .input_wrapper {
+    margin-bottom: 36px;
+    // width: 100%;
+    input[type='tel'] {
+      padding-right: 40px !important;
+      border: none;
+    }
+    @media (max-width: 999px) {
+      max-width: 100%;
+    }
+  }
+  .checkbox_wrapper {
+    margin-top: 18px;
+  }
+  .phone_wrapper {
+    background-color: #fff;
+    padding: 13px 12px;
+    input {
+      text-align: end;
+      padding-left: 0;
+    }
+  }
+  .flex_wrapper {
+    gap: 24px;
+    .input_wrapper{
+      input {
+        &:not([type='checkbox']) {
+          width: 420px;
+          @media (max-width: 999px) {
+            max-width: 100%;
+          }
+        }
+      }
+      &:only-child {
+        input{
+          width: 864px;
+        }
+      }
+    }
+    //  @media (max-width: 999px) {
+    //   flex-direction: column;
+    //  }
+  }
+  input {
+    font-size: 14px;
+    &:not([type='checkbox']) {
+      width: 100%;
+      // max-width: 864px;
+      &:only-child {
+        width: 864px;
+      }
+    }
+    &[type='checkbox'] {
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+      accent-color: $secondary-green;
+      &:checked,
+      &:focus {
+        accent-color: $secondary-green;
+        position: relative;
+      }
+    }
+  }
+  textarea {
+    font-size: 18px;
+    width: 100%;
+    @media (max-width: 999px) {
+      font-size: 14px;
+    }
+  }
+  input[type='date'] {
+    position: relative;
+    text-align: end;
+    &::-webkit-calendar-picker-indicator {
+      position: absolute;
+      bottom: 12px;
+      color: rgba(0, 0, 0, 0);
+      display: block;
+      background: url(/images/calender.svg) no-repeat;
+      width: 24px;
+      height: 24px;
+      border-width: thin;
+      @media (max-width: 999px) {
+        bottom: 8px;
+      }
+    }
+  }
+  .prev_procedures {
+    p {
+      color: $primary-green;
+      font-size: 14px;
+      font-family: $regular;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+    position: relative;
+    padding-left: 20px;
+    &::after {
+      content: '';
+      background: url(/images/down_arrow_green.svg) no-repeat center;
+      background-size: contain;
+      width: 14px;
+      height: 24px;
+      position: absolute;
+      left: 0;
+      top: 2px;
+    }
+  }
+  &.popup_form_read {
+    textarea,
+    input {
+      background-color: $disabled-gray;
+    }
+  }
 }

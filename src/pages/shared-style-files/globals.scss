@@ -37,17 +37,32 @@ $disabled-gray: #F4F4F4;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  @media (max-width: 999px) {
+    &.flex_col{
+      flex-direction: column;
+    }
+  }
 }
 
 .flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
+    @media (max-width: 999px) {
+    &.flex_col{
+      flex-direction: column;
+    }
+  }
 }
 .flex-space-between {
   display: flex;
   align-items: center;
   justify-content: space-between;
+    @media (max-width: 999px) {
+    &.flex_col{
+      flex-direction: column;
+    }
+  }
 }
 
 .grid-three {
@@ -88,6 +103,9 @@ $disabled-gray: #F4F4F4;
   padding: 18px 12px;
   border: solid 1.5px #CCCCCC;
   border-radius: 8px;
+  @media (max-width: 999px) {
+    padding: 12px;
+  }
 }
 
 .react-tel-input .selected-flag{
