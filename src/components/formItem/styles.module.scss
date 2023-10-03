@@ -29,10 +29,14 @@
     }
     @media (max-width: 999px) {
       max-width: 100%;
+      width: 100%;
     }
   }
   .checkbox_wrapper {
     margin-top: 18px;
+    @media (max-width: 999px) {
+      margin-right: 10px;
+    }
   }
   .phone_wrapper {
     background-color: #fff;
@@ -59,9 +63,9 @@
         }
       }
     }
-    //  @media (max-width: 999px) {
-    //   flex-direction: column;
-    //  }
+     @media (max-width: 999px) {
+     gap: 0
+     }
   }
   input {
     font-size: 14px;
